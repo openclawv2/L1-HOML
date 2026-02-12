@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Interactivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        canvas {
+            background: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+        }
+        button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #f0f0f0;
+        }
+        #demo1, #demo2 {
+            background: white;
+            color: #333;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 15px;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Machine Learning</h1>
+
+    <div id="demo1">
+        <h2>1. Regresión Lineal</h2>
+        <canvas id="canvas1" width="300" height="200"></canvas>
+        <button onclick="demo1()">Prueba Demo 1</button>
+    </div>
+
+    <div id="demo2">
+        <h2>2. Clustering K-Means</h2>
+        <canvas id="canvas2" width="300" height="200"></canvas>
+        <button onclick="demo2()">Prueba Demo 2</button>
+    </div>
+
+    <script>
+        const canvas1 = document.getElementById('canvas1');
+        if (canvas1) {
+            const ctx1 = canvas1.getContext('2d');
+            ctx1.fillStyle = '#f0f0f0';
+            ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
+            ctx1.fillStyle = '#333';
+            ctx1.font = '16px Arial';
+            ctx1.textAlign = 'center';
+            ctx1.fillText('Haz click abajo', canvas1.width/2, canvas1.height/2);
+            alert('Demo 1 lista');
+        }
+
+        function demo1() {
+            if (!canvas1) return;
+            const ctx1 = canvas1.getContext('2d');
+            ctx1.fillStyle = '#f0f0f0';
+            ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
+            ctx1.fillStyle = '#667eea';
+            ctx1.fillRect(50, 50, 100, 100);
+            ctx1.fillStyle = '#333';
+            ctx1.font = '16px Arial';
+            ctx1.fillText('Funciona!', canvas1.width/2, canvas1.height/2);
+            alert('¡Demo 1 funciona!');
+        }
+    </script>
+
+    <script>
+        const canvas2 = document.getElementById('canvas2');
+        if (canvas2) {
+            const ctx2 = canvas2.getContext('2d');
+            ctx2.fillStyle = '#f0f0f0';
+            ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
+            ctx2.fillStyle = '#333';
+            ctx2.font = '16px Arial';
+            ctx2.textAlign = 'center';
+            ctx2.fillText('Haz click abajo', canvas2.width/2, canvas2.height/2);
+            alert('Demo 2 lista');
+        }
+
+        function demo2() {
+            if (!canvas2) return;
+            const ctx2 = canvas2.getContext('2d');
+            ctx2.fillStyle = '#f0f0f0';
+            ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
+            ctx2.fillStyle = '#10b981';
+            ctx2.fillRect(50, 50, 50, 50);
+            ctx2.fillStyle = '#f59e0b';
+            ctx2.fillRect(150, 100, 50, 50);
+            ctx2.fillStyle = '#333';
+            ctx2.font = '16px Arial';
+            ctx2.fillText('Funciona!', canvas2.width/2, canvas2.height/2);
+            alert('¡Demo 2 funciona!');
+        }
+    </script>
+</body>
+</html>
